@@ -105,6 +105,7 @@ module.exports = function (grunt) {
 
     grunt.task.run(['concat', 'less:dist', 'clean:build',
       compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
+      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
   });
 
   grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
