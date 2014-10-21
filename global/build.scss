@@ -1,5 +1,4 @@
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss";
-@import "variables";
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss";
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bootswatch";
+@import "_variables.scss";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "_bootswatch.scss";
