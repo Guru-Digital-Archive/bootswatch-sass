@@ -1,12 +1,12 @@
 {
-  "name": "bootswatch",
+  "name": "bootswatch-sass",
   "description": "Bootswatch is a collection of themes for Bootstrap.",
   "version": "3.2.0",
   "author": "Thomas Park",
   "homepage": "http://bootswatch.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomaspark/bootswatch.git"
+    "url": "https://github.com/guru-digital/bootswatch-sass.git"
   },
   "license": "MIT",
   "ignore": [
@@ -32,7 +32,7 @@
     "*/index.html"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap-sass-official": "~3.2.0"
   },
   "devDependencies": {
     "font-awesome": "~4.0.0",
