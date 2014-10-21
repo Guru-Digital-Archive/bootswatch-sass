@@ -1,0 +1,96 @@
+Index: C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
+===================================================================
+--- C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
++++ C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
+@@ -14,9 +14,9 @@
+ }
+ 
+ .navbar {
+   .nav > li > a {
++    @extend .sandstone;
+-    @include sandstone();
+   }
+ 
+   &-form input,
+   &-form .form-control {
+@@ -27,9 +27,9 @@
+ // Buttons ====================================================================
+ 
+ .btn {
+   border: none;
++  @extend .sandstone;
+-  @include sandstone();
+ 
+   &:hover {
+     border-color: transparent;
+   }
+@@ -67,9 +67,9 @@
+ 
+ // Navs =======================================================================
+ 
+ .nav {
++  @extend .sandstone;
+-  @include sandstone();
+ 
+   .open > a,
+   .open > a:hover,
+   .open > a:focus {
+@@ -109,9 +109,9 @@
+   }
+ }
+ 
+ .breadcrumb {
++  @extend .sandstone;
+-  @include sandstone();
+ 
+   border: 1px solid $gray-light;
+ 
+   a {
+@@ -119,22 +119,22 @@
+   }
+ }
+ 
+ .pagination {
++  @extend .sandstone;
+-  @include sandstone();
+ }
+ 
+ .pager {
++  @extend .sandstone;
+-  @include sandstone();
+ 
+   li > a {
+     color: $gray;
+   }
+ }
+ 
+ .dropdown-menu {
+   & > li > a {
++    @extend .sandstone;
+-    @include sandstone();
+   }
+ }
+ 
+ // Indicators =================================================================
+@@ -147,9 +147,9 @@
+   }
+ }
+ 
+ .tooltip {
++  @extend .sandstone;
+-  @include sandstone();
+ }
+ 
+ // Progress bars ==============================================================
+ 
+@@ -180,9 +180,9 @@
+ 
+   &-heading,
+   &-title,
+   &-footer {
++    @extend .sandstone;
+-    @include sandstone();
+     color: #fff;
+   }
+ 
+   &-default {
