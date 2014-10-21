@@ -1,9 +1,10 @@
 module.exports = function (grunt) {
-  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-patch');
 
   // Project configuration.
   grunt.initConfig({
@@ -25,7 +26,7 @@ module.exports = function (grunt) {
     },
     clean: {
       build: {
-        src: ['*/build.less', '!global/build.less']
+        src: ['*/build.scss', '!global/build.scss']
       }
     },
     concat: {
@@ -38,16 +39,16 @@ module.exports = function (grunt) {
         dest: ''
       }
     },
-    less: {
+    sass: {
       dist: {
         options: {
-          compress: false
+          style: 'nested'
         },
         files: {}
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
+      files: ['*/variables.scss', '*/bootswatch.scss', '*/index.html'],
       tasks: 'build',
       options: {
         livereload: true,
@@ -70,7 +71,9 @@ module.exports = function (grunt) {
           open: true
         }
       }
-    }
+    },
+    convert_less: {},
+    apply_patch:{}
   });
 
   grunt.registerTask('none', function() {});
@@ -79,47 +82,96 @@ module.exports = function (grunt) {
     var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
 
-    var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
- 
-     // cancel the build (without failing) if this directory is not a valid theme
+    var isValidTheme = grunt.file.exists(theme, '_variables.scss') && grunt.file.exists(theme, '_bootswatch.scss');
+
+    // cancel the build (without failing) if this directory is not a valid theme
     if (!isValidTheme) {
       return;
     }
 
     var concatSrc;
     var concatDest;
-    var lessDest;
-    var lessSrc;
+    var scssDest;
+    var scssSrc;
     var files = {};
     var dist = {};
-    concatSrc = 'global/build.less';
-    concatDest = theme + '/build.less';
-    lessDest = '<%=builddir%>/' + theme + '/bootstrap.css';
-    lessSrc = [ theme + '/' + 'build.less' ];
+    concatSrc = 'global/build.scss';
+    concatDest = theme + '/build.scss';
+    scssDest = '<%=builddir%>/' + theme + '/bootstrap.css';
+    scssSrc = [theme + '/' + 'build.scss'];
 
     dist = {src: concatSrc, dest: concatDest};
     grunt.config('concat.dist', dist);
-    files = {}; files[lessDest] = lessSrc;
-    grunt.config('less.dist.files', files);
-    grunt.config('less.dist.options.compress', false);
+    files = {}; files[scssDest] = scssSrc;
+    grunt.config('sass.dist.files', files);
+    grunt.config('sass.dist.options.style', 'nested');
 
-    grunt.task.run(['concat', 'less:dist', 'clean:build',
-      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
-      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
+    grunt.task.run(['concat', 'sass:dist', 'clean:build',
+      compress ? 'compress:'+scssDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
   });
 
   grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
     var files = {}; files[fileDst] = fileSrc;
     grunt.log.writeln('compressing file ' + fileSrc);
 
-    grunt.config('less.dist.files', files);
-    grunt.config('less.dist.options.compress', true);
-    grunt.task.run(['less:dist']);
+    grunt.config('sass.dist.files', files);
+    grunt.config('sass.dist.options.style', 'nested');
+    grunt.task.run(['sass:dist']);
   });
 
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
+  });
+
+  /**
+   * Regex borrowed form
+   * https://gist.github.com/rosskevin/ddfe895091de2ca5f931
+   * */
+  grunt.registerTask('convert_less', 'naively convert less to scss (may require some debugging)', function () {
+    grunt.file.expand('*/*.less').forEach(function (f) {
+      var srcContents = grunt.file.read(f);
+      var out = srcContents
+              // 1. replace @ with $
+              .replace(/@(?!import|media|keyframes|-)/g, '$')
+              // 2. replace mixins
+              .replace(/[\.#](?![0-9])([\w\-]*)\s*\((.*)\)\s*\{/g, '@mixin $1($2){')
+              // 3. In LESS, bootstrap namespaces mixins, in SASS they are just prefixed e.g #gradient > .vertical-three-colors becomes @include gradient-vertical-three-colors
+              .replace(/[\.#](?![0-9])([\w\-]*)\s>\s\.(.*;)/g, '@include $1-$2')
+              // 4. replace includes
+              .replace(/[\.#](?![0-9])([\w\-].*\(.*;)/g, '@include $1')
+              // 5. replace no param mixin includes with empty parens
+              .replace(/@include\s([\w\-]*\s*);/g, '@include $1();')
+              // 6. replace string literals
+              .replace(/~"(.*)"/g, '#{"$1"}')
+              // 7. replace spin to adjust-hue (function name diff)
+              .replace(/spin\(/g, 'adjust-hue(')
+              // 8. replace bower and imports in build.scss
+              .replace(/bootstrap\/less\//g, 'bootstrap-sass-official/assets/stylesheets/')
+              .replace(/\.less/g, '');
+
+      var dest = f.replace(/\.less$/, '.scss').replace(/(bootswatch|variables)/, '_$1');
+      grunt.file.write(dest, out);
+      grunt.log.writeln('Converted less file:', f);
+      var patchFile = dest.replace(/\.scss$/, '.scss.patch');
+      if (grunt.file.exists(patchFile)) {
+        grunt.log.writeln('   Found patch:', patchFile);
+        grunt.task.run(['apply_patch:' + patchFile + ':' + dest]);
+      }
+      if (out.match(/\$\$/g)) {
+        grunt.log.warn("This file may contain illegal variable references that will have to be manually refactored", f);
+        var howto = "";
+        grunt.log.warn(howto);
+      }
+    });
+  });
+
+  grunt.registerTask('apply_patch', 'apply a unified patch file', function(patchFile, dest) {
+    var patchFiles = {};
+    patchFiles[dest] = dest;
+    grunt.config('patch.dist.options.patch', patchFile);
+    grunt.config('patch.dist.files', patchFiles);
+    grunt.task.run(['patch:dist']);
   });
 
   grunt.event.on('watch', function(action, filepath) {
@@ -128,7 +180,7 @@ module.exports = function (grunt) {
     grunt.config('buildtheme', theme);
   });
 
-  grunt.registerTask('server', 'connect:keepalive')
+  grunt.registerTask('server', 'connect:keepalive');
 
   grunt.registerTask('default', ['connect:base', 'watch']);
 };
