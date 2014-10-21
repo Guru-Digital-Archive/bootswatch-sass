@@ -257,8 +257,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -5267,7 +5267,7 @@ button.close {
   margin-left: -11px;
   border-bottom-width: 0;
   border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: fadein(rgba(0, 0, 0, 0.2), 5%);
   bottom: -11px; }
 
 .popover.top > .arrow:after {
@@ -5283,7 +5283,7 @@ button.close {
   margin-top: -11px;
   border-left-width: 0;
   border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25); }
+  border-right-color: fadein(rgba(0, 0, 0, 0.2), 5%); }
 
 .popover.right > .arrow:after {
   content: " ";
@@ -5297,7 +5297,7 @@ button.close {
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: fadein(rgba(0, 0, 0, 0.2), 5%);
   top: -11px; }
 
 .popover.bottom > .arrow:after {
@@ -5313,7 +5313,7 @@ button.close {
   margin-top: -11px;
   border-right-width: 0;
   border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25); }
+  border-left-color: fadein(rgba(0, 0, 0, 0.2), 5%); }
 
 .popover.left > .arrow:after {
   content: " ";

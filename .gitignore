@@ -4,5 +4,5 @@ node_modules
 build
 _site
 *.lock
-/nbproject/private/
+/nbproject
 .sass-cache/

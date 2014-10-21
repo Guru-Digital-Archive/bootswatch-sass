@@ -11,9 +11,9 @@
 			"css": "http://bootswatch.com/2/amelia/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/amelia/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/amelia/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/amelia/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/amelia/variables.less",
-			"lessVariables": "http://bootswatch.com/2/amelia/variables.less"
+			"less": "http://bootswatch.com/2/amelia/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/amelia/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/amelia/_variables.scss"
 		},
 	
 		{
@@ -24,9 +24,9 @@
 			"css": "http://bootswatch.com/2/cerulean/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/cerulean/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/cerulean/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/cerulean/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/cerulean/variables.less",
-			"lessVariables": "http://bootswatch.com/2/cerulean/variables.less"
+			"less": "http://bootswatch.com/2/cerulean/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/cerulean/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/cerulean/_variables.scss"
 		},
 	
 		{
@@ -37,9 +37,9 @@
 			"css": "http://bootswatch.com/2/cosmo/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/cosmo/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/cosmo/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/cosmo/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/cosmo/variables.less",
-			"lessVariables": "http://bootswatch.com/2/cosmo/variables.less"
+			"less": "http://bootswatch.com/2/cosmo/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/cosmo/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/cosmo/_variables.scss"
 		},
 	
 		{
@@ -50,9 +50,9 @@
 			"css": "http://bootswatch.com/2/cyborg/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/cyborg/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/cyborg/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/cyborg/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/cyborg/variables.less",
-			"lessVariables": "http://bootswatch.com/2/cyborg/variables.less"
+			"less": "http://bootswatch.com/2/cyborg/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/cyborg/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/cyborg/_variables.scss"
 		},
 	
 		{
@@ -63,9 +63,9 @@
 			"css": "http://bootswatch.com/2/flatly/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/flatly/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/flatly/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/flatly/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/flatly/variables.less",
-			"lessVariables": "http://bootswatch.com/2/flatly/variables.less"
+			"less": "http://bootswatch.com/2/flatly/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/flatly/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/flatly/_variables.scss"
 		},
 	
 		{
@@ -76,9 +76,9 @@
 			"css": "http://bootswatch.com/2/journal/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/journal/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/journal/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/journal/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/journal/variables.less",
-			"lessVariables": "http://bootswatch.com/2/journal/variables.less"
+			"less": "http://bootswatch.com/2/journal/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/journal/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/journal/_variables.scss"
 		},
 	
 		{
@@ -89,9 +89,9 @@
 			"css": "http://bootswatch.com/2/readable/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/readable/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/readable/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/readable/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/readable/variables.less",
-			"lessVariables": "http://bootswatch.com/2/readable/variables.less"
+			"less": "http://bootswatch.com/2/readable/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/readable/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/readable/_variables.scss"
 		},
 	
 		{
@@ -102,9 +102,9 @@
 			"css": "http://bootswatch.com/2/simplex/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/simplex/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/simplex/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/simplex/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/simplex/variables.less",
-			"lessVariables": "http://bootswatch.com/2/simplex/variables.less"
+			"less": "http://bootswatch.com/2/simplex/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/simplex/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/simplex/_variables.scss"
 		},
 	
 		{
@@ -115,9 +115,9 @@
 			"css": "http://bootswatch.com/2/slate/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/slate/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/slate/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/slate/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/slate/variables.less",
-			"lessVariables": "http://bootswatch.com/2/slate/variables.less"
+			"less": "http://bootswatch.com/2/slate/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/slate/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/slate/_variables.scss"
 		},
 	
 		{
@@ -128,9 +128,9 @@
 			"css": "http://bootswatch.com/2/spacelab/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/spacelab/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/spacelab/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/spacelab/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/spacelab/variables.less",
-			"lessVariables": "http://bootswatch.com/2/spacelab/variables.less"
+			"less": "http://bootswatch.com/2/spacelab/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/spacelab/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/spacelab/_variables.scss"
 		},
 	
 		{
@@ -141,9 +141,9 @@
 			"css": "http://bootswatch.com/2/spruce/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/spruce/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/spruce/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/spruce/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/spruce/variables.less",
-			"lessVariables": "http://bootswatch.com/2/spruce/variables.less"
+			"less": "http://bootswatch.com/2/spruce/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/spruce/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/spruce/_variables.scss"
 		},
 	
 		{
@@ -154,9 +154,9 @@
 			"css": "http://bootswatch.com/2/superhero/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/superhero/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/superhero/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/superhero/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/superhero/variables.less",
-			"lessVariables": "http://bootswatch.com/2/superhero/variables.less"
+			"less": "http://bootswatch.com/2/superhero/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/superhero/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/superhero/_variables.scss"
 		},
 	
 		{
@@ -167,9 +167,9 @@
 			"css": "http://bootswatch.com/2/united/bootstrap.css",
 			"css-min": "http://bootswatch.com/2/united/bootstrap.min.css",
 			"cssMin": "http://bootswatch.com/2/united/bootstrap.min.css",
-			"less": "http://bootswatch.com/2/united/bootswatch.less",
-			"less-variables": "http://bootswatch.com/2/united/variables.less",
-			"lessVariables": "http://bootswatch.com/2/united/variables.less"
+			"less": "http://bootswatch.com/2/united/_bootswatch.scss",
+			"less-variables": "http://bootswatch.com/2/united/_variables.scss",
+			"lessVariables": "http://bootswatch.com/2/united/_variables.scss"
 		}
 	
 	]

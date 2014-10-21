@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thomaspark/bootswatch.git"
+    "url": "https://github.com/guru-digital/bootswatch-sass.git"
   },
   "engines": {
     "node": ">= 0.10.0"
