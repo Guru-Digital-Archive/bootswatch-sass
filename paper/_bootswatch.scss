@@ -38,11 +38,11 @@
 
 $btn-bg-map: (
     "default": $btn-default-bg,
-    "primary": $btn-default-bg,
-    "success": $btn-default-bg,
-    "info": $btn-default-bg,
-    "warning": $btn-default-bg,
-    "danger": $btn-default-bg
+    "primary": $btn-primary-bg,
+    "success": $btn-success-bg,
+    "info": $btn-info-bg,
+    "warning": $btn-warning-bg,
+    "danger": $btn-danger-bg
 );
 @mixin btn($class){
   .btn-#{$class} {
