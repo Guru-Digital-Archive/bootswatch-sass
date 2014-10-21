@@ -9,8 +9,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/amelia/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/amelia/_variables.scss"
     },
     {
       "name": "Cerulean",
@@ -20,8 +20,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/cerulean/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cerulean/_variables.scss"
     },
     {
       "name": "Cosmo",
@@ -31,8 +31,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/cosmo/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cosmo/_variables.scss"
     },
     {
       "name": "Cyborg",
@@ -42,8 +42,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/cyborg/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/cyborg/_variables.scss"
     },
     {
       "name": "Darkly",
@@ -53,8 +53,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/darkly/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/darkly/_variables.scss"
     },
     {
       "name": "Flatly",
@@ -64,8 +64,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/flatly/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/flatly/_variables.scss"
     },
     {
       "name": "Journal",
@@ -75,8 +75,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/journal/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/journal/_variables.scss"
     },
     {
       "name": "Lumen",
@@ -86,8 +86,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/lumen/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/lumen/_variables.scss"
     },
     {
       "name": "Paper",
@@ -97,8 +97,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/paper/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/paper/_variables.scss"
     },
     {
       "name": "Readable",
@@ -108,8 +108,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/readable/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/readable/_variables.scss"
     },
     {
       "name": "Sandstone",
@@ -119,8 +119,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/sandstone/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/sandstone/_variables.scss"
     },
     {
       "name": "Simplex",
@@ -130,8 +130,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/simplex/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/simplex/_variables.scss"
     },
     {
       "name": "Slate",
@@ -141,8 +141,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/slate/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/slate/_variables.scss"
     },
     {
       "name": "Spacelab",
@@ -152,8 +152,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/spacelab/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/spacelab/_variables.scss"
     },
     {
       "name": "Superhero",
@@ -163,8 +163,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/superhero/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/superhero/_variables.scss"
     },
     {
       "name": "United",
@@ -174,8 +174,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/united/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/united/_variables.scss"
     },
     {
       "name": "Yeti",
@@ -185,8 +185,8 @@
       "css": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/bootstrap.css",
       "cssMin": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/bootstrap.min.css",
       "cssCdn": "//netdna.bootstrapcdn.com/bootswatch/latest/yeti/bootstrap.min.css",
-      "less": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/_bootswatch.scss",
-      "lessVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/_variables.scss"
+      "scss": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/_bootswatch.scss",
+      "scssVariables": "https://raw.githubusercontent.com/guru-digital/bootswatch-sass/gh-pages/yeti/_variables.scss"
     }
   ]
 }
