@@ -23,6 +23,7 @@
     ".gitignore",
     ".travis.yml",
     "CNAME",
+    "node_modules",
     "composer.json",
     "favicon.ico",
     "Gemfile",
