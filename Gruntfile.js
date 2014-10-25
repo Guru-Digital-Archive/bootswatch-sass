@@ -19,10 +19,10 @@ module.exports = function (grunt) {
             ' * Based on Bootstrap\n' +
             '*/\n',
     swatch: {
-      amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, paper:{}, readable:{},
-      sandstone:{}, simplex:{}, slate:{}, spacelab:{}, superhero:{},
-      united:{}, yeti:{}, custom:{}
+      amelia: {}, cerulean: {}, cosmo: {}, cyborg: {}, darkly: {},
+      flatly: {}, journal: {}, lumen: {}, paper: {}, readable: {},
+      sandstone: {}, simplex: {}, slate: {}, spacelab: {}, superhero: {},
+      united: {}, yeti: {}, custom: {}
     },
     clean: {
       build: {
@@ -73,12 +73,13 @@ module.exports = function (grunt) {
       }
     },
     convert_less: {},
-    apply_patch:{}
+    apply_patch: {}
   });
 
-  grunt.registerTask('none', function() {});
+  grunt.registerTask('none', function () {
+  });
 
-  grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
+  grunt.registerTask('build', 'build a regular theme', function (theme, compress) {
     var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
 
@@ -102,16 +103,18 @@ module.exports = function (grunt) {
 
     dist = {src: concatSrc, dest: concatDest};
     grunt.config('concat.dist', dist);
-    files = {}; files[scssDest] = scssSrc;
+    files = {};
+    files[scssDest] = scssSrc;
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.style', 'nested');
 
     grunt.task.run(['concat', 'sass:dist', 'clean:build',
-      compress ? 'compress:'+scssDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
+      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
   });
 
-  grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
-    var files = {}; files[fileDst] = fileSrc;
+  grunt.registerTask('compress', 'compress a generic css', function (fileSrc, fileDst) {
+    var files = {};
+    files[fileDst] = fileSrc;
     grunt.log.writeln('compressing file ' + fileSrc);
 
     grunt.config('sass.dist.files', files);
@@ -119,9 +122,9 @@ module.exports = function (grunt) {
     grunt.task.run(['sass:dist']);
   });
 
-  grunt.registerMultiTask('swatch', 'build a theme', function() {
+  grunt.registerMultiTask('swatch', 'build a theme', function () {
     var t = this.target;
-    grunt.task.run('build:'+t);
+    grunt.task.run('build:' + t);
   });
 
   /**
@@ -129,7 +132,8 @@ module.exports = function (grunt) {
    * https://gist.github.com/rosskevin/ddfe895091de2ca5f931
    * */
   grunt.registerTask('convert_less', 'naively convert less to scss (may require some debugging)', function () {
-    grunt.file.expand('*/*.less').forEach(function (f) {
+    var convertBaseDir = 'bootswatch/';
+    grunt.file.expand(convertBaseDir + '*/*.less').forEach(function (f) {
       var srcContents = grunt.file.read(f);
       var out = srcContents
               // 1. replace @ with $
@@ -150,9 +154,10 @@ module.exports = function (grunt) {
               .replace(/bootstrap\/less\//g, 'bootstrap-sass-official/assets/stylesheets/')
               .replace(/\.less/g, '');
 
-      var dest = f.replace(/\.less$/, '.scss').replace(/(bootswatch|variables)/, '_$1');
+      var baseDirRegex = new RegExp("^" + convertBaseDir, "g");
+      var dest = f.replace(baseDirRegex, '').replace(/\.less$/, '.scss').replace(/(bootswatch|variables)/, '_$1');
       grunt.file.write(dest, out);
-      grunt.log.writeln('Converted less file:', f);
+      grunt.log.writeln('Converted less file:', f, dest);
       var patchFile = dest.replace(/\.scss$/, '.scss.patch');
       if (grunt.file.exists(patchFile)) {
         grunt.log.writeln('   Found patch:', patchFile);
@@ -166,7 +171,21 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerTask('apply_patch', 'apply a unified patch file', function(patchFile, dest) {
+  grunt.registerTask('update_html', 'naively convert less to scss (may require some debugging)', function () {
+    var convertBaseDir = 'bootswatch/';
+    grunt.file.expand(convertBaseDir + '*/*.html').forEach(function (f) {
+      var srcContents = grunt.file.read(f);
+      var out = srcContents
+              .replace(/(github.com)\/(thomaspark)\/(bootswatch)(.*)/g, '$1/guru-digital/bootswatch-sass$4')
+              .replace(/(bootswatch|variables)\.less/g, '_$1.scss');
+      var baseDirRegex = new RegExp("^" + convertBaseDir, "g");
+      var dest = f.replace(baseDirRegex, '');
+      grunt.file.write(dest, out);
+      grunt.log.writeln('Parsed HTML file:', f, dest);
+    });
+  });
+
+  grunt.registerTask('apply_patch', 'apply a unified patch file', function (patchFile, dest) {
     var patchFiles = {};
     patchFiles[dest] = dest;
     grunt.config('patch.dist.options.patch', patchFile);
@@ -174,7 +193,7 @@ module.exports = function (grunt) {
     grunt.task.run(['patch:dist']);
   });
 
-  grunt.event.on('watch', function(action, filepath) {
+  grunt.event.on('watch', function (action, filepath) {
     var path = require('path');
     var theme = path.dirname(filepath);
     grunt.config('buildtheme', theme);
