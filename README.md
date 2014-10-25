@@ -3,6 +3,8 @@ Bootswatch
 
 Bootswatch is a collection of free themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
+This repository is a port to SASS so you can include swatches in your Bootstrap SASS project.
+
 Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet.
