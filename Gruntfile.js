@@ -182,15 +182,25 @@ module.exports = function (grunt) {
 
     grunt.registerTask('update_html', 'Update html files replace less references with sass', function () {
         var convertBaseDir = 'bootswatch/';
-        grunt.file.expand(convertBaseDir + '*/*.html').forEach(function (f) {
+        var htmlFiles = grunt.file.expand(convertBaseDir + '*/*.html');
+        htmlFiles.push(convertBaseDir+"index.html");
+        htmlFiles.forEach(function (f) {
             var srcContents = grunt.file.read(f);
             var out = srcContents
-                    .replace(/(github.com)\/(thomaspark)\/(bootswatch)(.*)/g, '$1/guru-digital/bootswatch-sass$4')
+                    .replace(/(.*user=)thomaspark(&repo=)bootswatch(.*)/g, '$1guru-digital$2bootswatch-sass$3')
+                    .replace(/(github.com)\/thomaspark\/bootswatch(.*)/g, '$1/guru-digital/bootswatch-sass$2')
+                    .replace(/LESS/g, 'SCSS')
                     .replace(/(bootswatch|variables)\.less/g, '_$1.scss');
             var baseDirRegex = new RegExp("^" + convertBaseDir, "g");
             var dest = f.replace(baseDirRegex, '');
             grunt.file.write(dest, out);
             grunt.log.writeln('Parsed HTML file:', f, dest);
+            var patchFile = dest+'.patch';
+            if (grunt.file.exists(patchFile)) {
+                grunt.log.writeln('   Found patch:', patchFile);
+                grunt.task.run(['apply_patch:' + patchFile + ':' + dest]);
+            }
+     
         });
     });
 
@@ -207,15 +217,23 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('sync_with_upstream', 'Update bootswatch sass from the original bootswatch', function (patchFile, dest) {
-        var bootwatch = require('./bootswatch/Gruntfile.js');
         grunt.task.run(['update_bootswatch_less', 'convert_less', 'update_html', 'swatch']);
+    });
+    
+    grunt.registerTask('create_patch', 'Creates a patch file', function (oldFile, newFile) {
+      var jsdiff = require('diff');
+      var patchFile = oldFile + ".patch";
+      var newText = grunt.file.read(newFile);
+      var oldText = grunt.file.read(oldFile);
+      var diffText = jsdiff.createPatch(patchFile, oldText, newText);
+      grunt.file.write(patchFile, diffText);
     });
 
     grunt.registerTask('apply_patch', 'apply a unified patch file', function (patchFile, dest) {
-        var patchFiles = {};
-        patchFiles[dest] = dest;
+        var files = {};
+        files[dest] = dest;
         grunt.config('patch.dist.options.patch', patchFile);
-        grunt.config('patch.dist.files', patchFiles);
+        grunt.config('patch.dist.files', files);
         grunt.task.run(['patch:dist']);
     });
 

@@ -1,0 +1,63 @@
+Index: help/index.html.patch
+===================================================================
+--- help/index.html.patch
++++ help/index.html.patch
+@@ -120,12 +120,58 @@
+               <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:amelia</code> for Amelia. Or type <code>grunt swatch</code> to build them all at once. </p></li>
+               <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the SCSS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
+             </ol>
+             <p>Here are additional tips for <a href="http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
++            <h2 id="additional-grunt-tasks">Additional Grunt tasks</h2>
++            <p>You can update the sass files from the Offical Bootswach less files by running the following Grunt tasks</p>
++            <p>
++              Pull down the latest official Bootswatch repository
++              <code>
++                grunt update_bootswatch_less
++              </code>
++            </p>
++            <p>
++              Convert the official Bootswatch LESS files to SASS
++              <code>
++                grunt convert_less
++              </code>
++            </p>
++            <br/>
++            <p>You can run all the update tasks by running the single task
++              <code>
++                grunt sync_with_upstream
++              </code>
++            </p>
+           </div>
+         </div>
+ 
+         <div class="row">
++          <div class="col-lg-9">
++            <h1 id="less-to-sass">LESS to SASS conversion</h1>
++            <p>LESS to SASS conversion is done by a series simple regular expression replacements.</p>
++            <p>While this works for 90% of the conversions, due to the complexity and differences between LESS and SASS, this process is not always enough to convert LESS to SASS properly.</p>
++            <p>The <code>convert_less</code> grunt task makes up for this by supporting patch files.</p>
++            <h2>Patch files</h2>
++            <p>Place a unified patch file named myfile.scss.patch in the same directory as myfile.scss and <code>covert_less</code> will automatically apply the patch to myfile.scss after the basic regular expression has taken place.</p>
++            <p>E.g.</p>
++            <p>The patch file named <code>paper/_bootswatch.scss.patch</code> will be applied to <code>paper/_bootswatch.scss</code></p>
++            <p>Check out <a href="../paper/_bootswatch.scss.patch"><code>paper/_bootswatch.scss.patch</code></a> for an example </p>
++            <p></p>
++            <h2 id="create-patch">Create a patch</h2>
++            <p>The grunt task <code>create_pach</code> can be used to create a patch file</p>
++            <p>To create a patch, copy and rename the file to be patched.</p>
++            <p>E.g.</p>
++            <p>
++              If you are creating a patch for <code>paper/_bootswatch.scss</code>, copy it to <code>paper/_bootswatch.fixed.scss</code><br/>
++              Open <code>_bootswatch.fixed.scss</code> and make the changes you require<br/>
++              Run <code>grunt create_patch:paper/_bootswatch.scss:paper/_bootswatch.fixed.scss</code><br/>
++              This will result in a file named <code>paper/bootswatch.scss.patch</code> being created.<br/>
++              The command <code>grunt convert_less</code> will now apply this patch after converting the less files
++            </p>
++          </div>
++        </div>
++      
++        <div class="row">
+           <div class="col-lg-12">
+             <h1 id="api">API</h1>
+             <p>You can use the API to integrate the themes with your platform. Send your request to:</p>
+             <p><a href="http://api.bootswatch.com/3/">http://api.bootswatch.com/3/</a></p>
