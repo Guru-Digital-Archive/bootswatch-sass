@@ -79,7 +79,7 @@ module.exports = function (grunt) {
         update_submodules: {
             withCustomParameters: {
                 options: {
-                    params: "--force" // specifies your own command-line parameters
+                    params: "--init --recursive --force" // specifies your own command-line parameters
                 }
             }
         }
@@ -205,8 +205,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('update_bootswatch_less', 'Update the less version submodule', function (patchFile, dest) {
-        var patchFiles = {};
-        patchFiles[dest] = dest;
         grunt.task.run(['update_submodules']);
         var cwd = process.cwd();
         grunt.file.setBase(cwd + "/bootswatch");
