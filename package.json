@@ -1,9 +1,9 @@
 {
-  "name": "bootswatch",
-  "description": "Bootswatch is a collection of themes for Bootstrap.",
+  "name": "bootswatch-sass",
+  "description": "Bootswatch is a collection of themes for Bootstrap. SASS / SCSS edition",
   "version": "3.2.0",
   "author": "Thomas Park",
-  "homepage": "http://bootswatch.com",
+  "homepage": "http://guru-digital.github.io/bootswatch-sass/",
   "license": "MIT",
   "repository": {
     "type": "git",

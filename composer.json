@@ -1,6 +1,6 @@
 {
-    "name": "thomaspark/bootswatch-sass",
-    "description": "Themes for Bootstrap, scss edition",
+    "name": "gdmedia/bootswatch-sass",
+    "description": "Bootswatch is a collection of themes for Bootstrap. SASS / SCSS edition",
     "license": "MIT",
     "authors": [
         {
