@@ -43,7 +43,7 @@ Check out the [Help page](http://guru-digital.github.io/bootswatch-sass/help/) f
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. Send your request to `http://api.bootswatch.com/3/`.
+A simple API is available for integrating your platform with Bootswatch. Send your request to `http://guru-digital.github.io/bootswatch-sass/api/2.json`.
 
 The swatch objects are returned in an array called `themes`, each one with the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `cssMin`, `scss`, and `scssVariables`.
 
