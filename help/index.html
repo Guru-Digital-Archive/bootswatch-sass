@@ -118,9 +118,29 @@
               <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="http://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
               <li><p>Modify <code>_variables.scss</code> and <code>_bootswatch.scss</code> in one of the theme directories, or create your own in <code>/custom</code>.</p></li>
               <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:amelia</code> for Amelia. Or type <code>grunt swatch</code> to build them all at once. </p></li>
-              <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the LESS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
+              <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the SCSS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
             </ol>
             <p>Here are additional tips for <a href="http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
+            <h2 id="additional-grunt-tasks">Additional Grunt tasks</h2>
+            <p>You can update the sass files from the Offical Bootswach less files by running the following Grunt tasks</p>
+            <p>
+              Pull down the latest official Bootswatch repository
+              <code>
+               grunt update_bootswatch_less
+              </code>
+             </p>
+            <p>
+              Convert the official Bootswatch LESS files to SASS
+              <code>
+                grunt convert_less
+              </code>
+            </p>
+            <br/>
+            <p>You can run all the update tasks by running the single task
+              <code>
+               grunt sync_with_upstream
+             </code>
+            </p>
           </div>
         </div>
 
@@ -128,7 +148,7 @@
           <div class="col-lg-12">
             <h1 id="api">API</h1>
             <p>You can use the API to integrate the themes with your platform. Send your request to:</p>
-            <p><a href="http://api.bootswatch.com/3/">http://api.bootswatch.com/3/</a></p>
+            <p><a href="http://guru-digital.github.io/bootswatch-sass/api/3.json">http://guru-digital.github.io/bootswatch-sass/api/3.json</a></p>
             <p>This returns an object with a <code>version</code> and a <code>themes</code> property. <code>themes</code> is an array with the following properties:</p>
             <ul>
               <li><code>name</code></li>

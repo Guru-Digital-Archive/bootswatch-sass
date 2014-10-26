@@ -30,7 +30,10 @@
     "Gruntfile.js",
     "index.html",
     "package.json",
-    "*/index.html"
+    "*/index.html",
+    "bootswatch/",
+    "*.less",
+    "*.patch"
   ],
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0"
