@@ -181,6 +181,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('update_html', 'Update html files replace less references with sass', function () {
+        var footerText ='<p>Bootswatch SASS version made by <a href="http://gdmedia.tv" rel="nofollow">Corey Sewell</a>. Contact him at <a href="mailto:corey@gdmedia.tv">corey@gdmedia.tv</a>.</p>';
         var convertBaseDir = 'bootswatch/';
         var htmlFiles = grunt.file.expand(convertBaseDir + '*/*.html');
         htmlFiles.push(convertBaseDir+"index.html");
@@ -190,6 +191,7 @@ module.exports = function (grunt) {
                     .replace(/(.*user=)thomaspark(&repo=)bootswatch(.*)/g, '$1guru-digital$2bootswatch-sass$3')
                     .replace(/(github.com)\/thomaspark\/bootswatch(.*)/g, '$1/guru-digital/bootswatch-sass$2')
                     .replace(/LESS/g, 'SCSS')
+                    .replace(/(.*)(<p>)(Made by.*<\/p>)/g, '$1'+footerText+"\n"+'$1$2Original Bootswatch $3')
                     .replace(/(bootswatch|variables)\.less/g, '_$1.scss');
             var baseDirRegex = new RegExp("^" + convertBaseDir, "g");
             var dest = f.replace(baseDirRegex, '');
