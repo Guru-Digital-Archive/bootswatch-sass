@@ -1,7 +1,7 @@
-Index: C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
+Index: sandstone/_bootswatch.scss.patch
 ===================================================================
---- C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
-+++ C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
+--- sandstone/_bootswatch.scss.patch
++++ sandstone/_bootswatch.scss.patch
 @@ -14,9 +14,9 @@
  }
  
@@ -85,9 +85,9 @@ Index: C:/xampp/htdocs/bootswatch-scss/sandstone/_bootswatch.scss.patch
  
 @@ -180,9 +180,9 @@
  
-   &-heading,
-   &-title,
-   &-footer {
+   .panel-heading,
+   .panel-title,
+   .panel-footer {
 +    @extend .sandstone;
 -    @include sandstone();
      color: #fff;

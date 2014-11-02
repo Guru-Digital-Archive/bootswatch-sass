@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * bootswatch v3.2.0
- * Homepage: http://bootswatch.com
+ * bootswatch-sass v3.2.0
+ * Homepage: http://guru-digital.github.io/bootswatch-sass/
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
@@ -2305,14 +2305,14 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
 .form-control::-moz-placeholder {
-  color: #777777;
+  color: #999;
   opacity: 1; }
 
 .form-control:-ms-input-placeholder {
-  color: #777777; }
+  color: #999; }
 
 .form-control::-webkit-input-placeholder {
-  color: #777777; }
+  color: #999; }
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   cursor: not-allowed;
@@ -3862,17 +3862,17 @@ tbody.collapse.in {
   border-color: #090909; }
 
 .navbar-inverse .navbar-brand {
-  color: #777777; }
+  color: #9d9d9d; }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
   color: #fff;
   background-color: transparent; }
 
 .navbar-inverse .navbar-text {
-  color: #777777; }
+  color: #9d9d9d; }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #777777; }
+  color: #9d9d9d; }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;
@@ -3911,7 +3911,7 @@ tbody.collapse.in {
     background-color: #090909; }
 
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777; }
+    color: #9d9d9d; }
 
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #fff;
@@ -3925,13 +3925,13 @@ tbody.collapse.in {
     color: #444;
     background-color: transparent; } }
 .navbar-inverse .navbar-link {
-  color: #777777; }
+  color: #9d9d9d; }
 
 .navbar-inverse .navbar-link:hover {
   color: #fff; }
 
 .navbar-inverse .btn-link {
-  color: #777777; }
+  color: #9d9d9d; }
 
 .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
   color: #fff; }
@@ -4994,7 +4994,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1040;
   -webkit-overflow-scrolling: touch;
   outline: 0; }
 

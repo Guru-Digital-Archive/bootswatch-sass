@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * bootswatch v3.2.0
- * Homepage: http://bootswatch.com
+ * bootswatch-sass v3.2.0
+ * Homepage: http://guru-digital.github.io/bootswatch-sass/
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
@@ -4995,7 +4995,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1040;
   -webkit-overflow-scrolling: touch;
   outline: 0; }
 
@@ -5712,7 +5712,9 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.sandstone, .navbar .nav > li > a, .btn, .nav, .breadcrumb, .pagination, .pager, .dropdown-menu > li > a, .tooltip, .panel-heading, .panel-title, .panel-footer {
+.sandstone, .navbar .nav > li > a, .btn, .nav, .breadcrumb, .pagination, .pager, .dropdown-menu > li > a, .tooltip, .panel .panel-heading,
+.panel .panel-title,
+.panel .panel-footer {
   font-size: 11px;
   line-height: 22px;
   font-weight: 500;
@@ -5809,7 +5811,9 @@ input:focus,
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.panel-heading, .panel-title, .panel-footer {
+.panel .panel-heading,
+.panel .panel-title,
+.panel .panel-footer {
   color: #fff; }
 
 .panel-default .panel-heading,

@@ -207,13 +207,18 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('update_bootswatch_less', 'Update the less version submodule', function (patchFile, dest) {
-        grunt.task.run(['update_submodules']);
         var cwd = process.cwd();
-        grunt.file.setBase(cwd + "/bootswatch");
+
+        grunt.task.run(['update_submodules']);
+
+        grunt.config('gitpull.bootswatch.options.cwd', cwd + "/bootswatch");
         grunt.config('gitpull.bootswatch.options.remote', 'origin');
         grunt.config('gitpull.bootswatch.options.branch', 'gh-pages');
         grunt.task.run(['gitpull']);
-        grunt.file.setBase(cwd);
+
+        grunt.config('gitcheckout.bootswatch.options.cwd', cwd + "/bootswatch");
+		grunt.config('gitcheckout.bootswatch.options.branch', 'gh-pages');
+        grunt.task.run(['gitcheckout']);
     });
 
     grunt.registerTask('sync_with_upstream', 'Update bootswatch sass from the original bootswatch', function (patchFile, dest) {
