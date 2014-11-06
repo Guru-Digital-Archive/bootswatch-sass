@@ -5472,12 +5472,15 @@ a {
 
 textarea,
 textarea.form-control,
+input.form-control,
 input[type=text],
 input[type=password],
 input[type=email],
 input[type=number],
 [type=text].form-control,
-[type=password].form-control {
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -5486,17 +5489,22 @@ input[type=number],
   font-size: 16px; }
   textarea:focus,
   textarea.form-control:focus,
+  input.form-control:focus,
   input[type=text]:focus,
   input[type=password]:focus,
   input[type=email]:focus,
   input[type=number]:focus,
   [type=text].form-control:focus,
-  [type=password].form-control:focus {
+  [type=password].form-control:focus,
+  [type=email].form-control:focus,
+  [type=tel].form-control:focus {
     -webkit-box-shadow: inset 0 -2px 0 #2196F3;
     box-shadow: inset 0 -2px 0 #2196F3; }
   textarea[disabled], textarea[readonly],
   textarea.form-control[disabled],
   textarea.form-control[readonly],
+  input.form-control[disabled],
+  input.form-control[readonly],
   input[type=text][disabled],
   input[type=text][readonly],
   input[type=password][disabled],
@@ -5508,17 +5516,28 @@ input[type=number],
   [type=text].form-control[disabled],
   [type=text].form-control[readonly],
   [type=password].form-control[disabled],
-  [type=password].form-control[readonly] {
+  [type=password].form-control[readonly],
+  [type=email].form-control[disabled],
+  [type=email].form-control[readonly],
+  [type=tel].form-control[disabled],
+  [type=tel].form-control[readonly] {
     -webkit-box-shadow: none;
     box-shadow: none;
     border-bottom: 1px dotted #ddd; }
 
 select,
 select.form-control {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
+  font-size: 16px;
+  padding-left: 0px; }
+  select:focus,
+  select.form-control:focus {
+    -webkit-box-shadow: inset 0 -2px 0 #2196F3;
+    box-shadow: inset 0 -2px 0 #2196F3; }
 
 .has-warning input,
 .has-warning .form-control,
@@ -5609,7 +5628,7 @@ select.form-control {
     box-shadow: none; }
     .progress-bar:last-child {
       border-radius: 0 3px 3px 0; }
-    .progress-bar:last-child.progress-bar:before {
+    .progress-bar.progress-bar:before {
       display: block;
       content: 'div::before';
       position: absolute;
@@ -5619,13 +5638,13 @@ select.form-control {
       right: 0;
       z-index: -1;
       background-color: #cae6fc; }
-    .progress-bar-success:last-child.progress-bar:before {
+    .progress-bar-success.progress-bar:before {
       background-color: #c7e7c8; }
-    .progress-bar-info:last-child.progress-bar:before {
+    .progress-bar-info.progress-bar:before {
       background-color: #edc9f3; }
-    .progress-bar-warning:last-child.progress-bar:before {
+    .progress-bar-warning.progress-bar:before {
       background-color: #ffe0b3; }
-    .progress-bar-danger:last-child.progress-bar:before {
+    .progress-bar-danger.progress-bar:before {
       background-color: #f28e92; }
 
 .close {

@@ -124,12 +124,15 @@ a {
 
 textarea,
 textarea.form-control,
+input.form-control,
 input[type=text],
 input[type=password],
 input[type=email],
 input[type=number],
 [type=text].form-control,
-[type=password].form-control {
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -149,9 +152,16 @@ input[type=number],
 
 select,
 select.form-control {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  @include box-shadow(none);
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  @include box-shadow(inset 0 -1px 0 #ddd);
+  font-size: 16px;
+  padding-left: 0px;
+
+  &:focus {
+    @include box-shadow(inset 0 -2px 0 $brand-primary);
+  }
 }
 
 .has-warning {
@@ -285,7 +295,7 @@ select.form-control {
       border-radius: 0 3px 3px 0;
     }
 
-    &:last-child.progress-bar:before {
+    &.progress-bar:before {
       display: block;
       content: 'div::before';
       position: absolute;
@@ -297,19 +307,19 @@ select.form-control {
       background-color: lighten($progress-bar-bg, 35%);
     }
 
-    &-success:last-child.progress-bar:before {
+    &-success.progress-bar:before {
       background-color: lighten($brand-success, 35%);
     }
 
-    &-info:last-child.progress-bar:before {
+    &-info.progress-bar:before {
       background-color: lighten($brand-info, 45%);
     }
 
-    &-warning:last-child.progress-bar:before {
+    &-warning.progress-bar:before {
       background-color: lighten($brand-warning, 35%);
     }
 
-    &-danger:last-child.progress-bar:before {
+    &-danger.progress-bar:before {
       background-color: lighten($brand-danger, 25%);
     }
   }

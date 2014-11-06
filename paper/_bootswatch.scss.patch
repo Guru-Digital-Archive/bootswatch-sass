@@ -1,7 +1,7 @@
-Index: C:/xampp/htdocs/bootswatch-scss/paper/_bootswatch.scss.patch
+Index: paper/_bootswatch.scss.patch
 ===================================================================
---- C:/xampp/htdocs/bootswatch-scss/paper/_bootswatch.scss.patch
-+++ C:/xampp/htdocs/bootswatch-scss/paper/_bootswatch.scss.patch
+--- paper/_bootswatch.scss.patch
++++ paper/_bootswatch.scss.patch
 @@ -35,24 +35,32 @@
  }
  
@@ -41,38 +41,38 @@ Index: C:/xampp/htdocs/bootswatch-scss/paper/_bootswatch.scss.patch
        @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
      }
    }
-@@ -276,9 +284,9 @@
+@@ -286,9 +294,9 @@
      &:last-child {
        border-radius: 0 3px 3px 0;
      }
  
-+    &:last-child.progress-bar:before {
++    &.progress-bar:before {
 -    &:last-child&:before {
        display: block;
        content: 'div::before';
        position: absolute;
        width: 100%;
-@@ -288,21 +296,21 @@
+@@ -298,21 +306,21 @@
        z-index: -1;
        background-color: lighten($progress-bar-bg, 35%);
      }
  
-+    &-success:last-child.progress-bar:before {
++    &-success.progress-bar:before {
 -    &-success:last-child&:before {
        background-color: lighten($brand-success, 35%);
      }
  
-+    &-info:last-child.progress-bar:before {
++    &-info.progress-bar:before {
 -    &-info:last-child&:before {
        background-color: lighten($brand-info, 45%);
      }
  
-+    &-warning:last-child.progress-bar:before {
++    &-warning.progress-bar:before {
 -    &-warning:last-child&:before {
        background-color: lighten($brand-warning, 35%);
      }
  
-+    &-danger:last-child.progress-bar:before {
++    &-danger.progress-bar:before {
 -    &-danger:last-child&:before {
        background-color: lighten($brand-danger, 25%);
      }
