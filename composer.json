@@ -1,6 +1,6 @@
 {
     "name": "gdmedia/bootswatch-sass",
-    "description": "Bootswatch is a collection of themes for Bootstrap. SASS / SCSS edition",
+    "description": "abandoned since Sass is now in official bootswatch",
     "license": "MIT",
     "authors": [
         {
@@ -14,8 +14,8 @@
     ],
     "type": "component",
     "suggest": {
-        "robloach/component-installer": "Allows installation of Components via Composer"
-    },
+        "robloach/component-installer": "Allows installation of Components via Composer",
+"thomaspark/bootswatch": "Official Bootswatch"    },
     "extra": {
         "component": {
             "name": "bootswatch-sass",
