@@ -129,7 +129,7 @@ $table-condensed-cell-padding:  3px;
 //** Default background color used for all tables.
 $table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               $well-bg;
+$table-bg-accent:               lighten($body-bg, 5%);
 //** Background color used for `.table-hover`.
 $table-bg-hover:                darken($well-bg, 3%);
 $table-bg-active:               $table-bg-hover;
